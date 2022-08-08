@@ -32,19 +32,13 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <a href="{{ route('generacionUno') }}">
         <img src="https://www.redrum-verlag.de/images/categories/banner-1_pokemon.jpg" class="d-block w-100" alt="..." width="100" height="450">
-        </a>
       </div>
       <div class="carousel-item">
-        <a href="{{ route('generacionUno') }}">
         <img src="https://img.elo7.com.br/product/original/1E2320A/kit-especial-pokemon-go-personalizados-pokemon.jpg" class="d-block w-100" alt="..." width="100" height="450">
-        </a>
       </div>
       <div class="carousel-item">
-        <a href="{{ route('generacionUno') }}">
         <img src="https://www.ansaldo.cl/wp-content/uploads/2022/05/banner-pokemon-web-24-1-scaled.jpg" class="d-block w-100" alt="..." width="100" height="450">
-        </a>
       </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">

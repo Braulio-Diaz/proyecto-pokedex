@@ -26,3 +26,6 @@ Route::get('/inicio/pokemons/primerageneracion', 'App\Http\Controllers\PokedexCo
 Route::get('/inicio/pokemons/primerageneracion/agregarpokemon', 'App\Http\Controllers\CreatePokemonController@agregarPokemon')->name('agregarPokemon');
 Route::post('/inicio/pokemons/primerageneracion/agregarpokemon/resultado', 'App\Http\Controllers\CreatePokemonController@resultadoAgregar')->name('resultadoAgregar');
 
+Route::get('/inicio/pokemons/primerageneracion/editarpokemon', 'App\Http\Controllers\UpdatePokemonController@editarPokemon')->name('editarPokemon');
+
+Route::get('/inicio/pokemons/primerageneracion/eliminarpokemon', 'App\Http\Controllers\DeletePokemonController@eliminarPokemon')->name('eliminarPokemon');

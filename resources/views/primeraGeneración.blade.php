@@ -55,8 +55,12 @@
           <td>Planta</td>
           <td>フシギダネ</td>
           <td>Fushigidane</td>
-          <td><button type="button" class="btn btn-success" style="background-color:#45B143;">Editar</button></td>
-          <td><button type="button" class="btn btn-danger" style="background-color:#F14600;">Eliminar</button></td>
+          <td><a href="{{ route('editarPokemon') }}">
+            <button type="button" class="btn btn-success" style="background-color:#45B143;">Editar</button>
+          </a></td>
+          <td><a href="{{ route('eliminarPokemon') }}">
+            <button type="button" class="btn btn-danger" style="background-color:#F14600;">Eliminar</button>
+          </a></td>
         </tr>
         <tr>
           <th scope="row">2</th>

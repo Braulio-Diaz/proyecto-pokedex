@@ -6,5 +6,7 @@ use Illuminate\Http\Request;
 
 class UpdatePokemonController extends Controller
 {
-    //
+    public function editarPokemon(){
+        return view('editarPokemon');
+    }
 }
