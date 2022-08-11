@@ -11,7 +11,7 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="/inicio"><i class='bx bxs-home-smile bx-sm'></i></a>
-        <b><a class="nav-link" href="{{ route('verPokemons') }}">Ver pokémon</a></b>
+        <b><a class="nav-link" href="{{ route('pokemongeneraciones') }}">Ver pokémon</a></b>
       </div>
     </div>
     <div>
@@ -26,7 +26,7 @@
 
 <br>
 <div class="card mb-3">
-    <a href="{{ route('generacionUno') }}">
+    <a href="/pokemon">
         <img src="https://media.vandal.net/i/1200x630/10-2021/2021105724573_1.jpg
         " width="100" height="450"  class="card-img-top" alt="...">
     </a>
@@ -38,7 +38,7 @@
 
   <br>
   <div class="card mb-3">
-      <a href="{{ route('generacionUno') }}">
+      <a href="">
           <img src="https://img.elo7.com.br/product/original/1BACF66/painel-1-50x1-pokemon-pokemon-go.jpg" width="100" height="450" class="card-img-top" alt="...">
       </a>
       <div class="card-body" style="background-color:#c92424;">
@@ -49,7 +49,7 @@
 
     <br>
     <div class="card mb-3">
-        <a href="{{ route('generacionUno') }}">
+        <a href="">
             <img src="https://www.ansaldo.cl/wp-content/uploads/2022/05/banner-pokemon-web-24-1-scaled.jpg
             " width="100" height="450" class="card-img-top" alt="...">
         </a>

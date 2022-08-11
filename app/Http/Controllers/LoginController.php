@@ -7,22 +7,22 @@ use Illuminate\Http\Request;
 class LoginController extends Controller
 {
     public function login(){
-        return view('login');
+        return view('login.login');
     }
 
     public function registrarse(){
-        return view('registrarse');
+        return view('login.registrarse');
     }
 
     public function usuarioCreado(){
-        return view('usuarioCreado');
+        return view('login.usuarioCreado');
     }
     
     public function recuperarContraseña(){
-        return view('recuperarContraseña');
+        return view('login.recuperarContraseña');
     }
 
     public function contraseñaRecuperada(){
-        return view('contraseñaRecuperada');
+        return view('login.contraseñaRecuperada');
     }
 }

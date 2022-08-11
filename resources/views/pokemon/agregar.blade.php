@@ -11,7 +11,7 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link active" aria-current="page" href="/inicio"><i class='bx bxs-home-smile bx-sm'></i></a>
-        <b><a class="nav-link" href="{{ route('verPokemons') }}">Ver pokémon</a></b>
+        <b><a class="nav-link" href="{{ route('pokemongeneraciones') }}">Ver pokémon</a></b>
       </div>
     </div>
     <div>
@@ -30,37 +30,38 @@
     <div class="card-body">
       <h4 class="card-title" style="text-align:center">Agregar pokémon</h4>
       <br>
-      <form method="POST" action="{{ route('resultadoAgregar') }}">
+      <form action="/pokemon" method="POST" >
         <div class="mb-3">
-          <input type="file" class="form-control-file" id="exampleFormControlFile1">
+          <label for="exampleInputEmail1" class="form-label">Link imagen</label>
+          <input type="text" class="form-control" id="image" name="image">
           </div>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="nombre" name="nombre">
+            <input type="text" class="form-control" id="name" name="name">
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Tipo 1</label>
-            <input type="text" class="form-control" id="Tipo_1" name="Tipo_1">
+            <input type="text" class="form-control" id="type1" name="type1">
           </div>
           <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Tipo 2</label>
-              <input type="text" class="form-control" id="Tipo_2" name="Tipo_2">
+              <input type="text" class="form-control" id="type2" name="type2">
           </div>
           <div class="mb-3">
             <label for="exampleInputPassword1" class="form-label">Grupo huevo 1</label>
-            <input type="text" class="form-control" id="Grupo_huevo_1" name="Grupo_huevo_1">
+            <input type="text" class="form-control" id="eggGroup1" name="eggGroup1">
           </div>
           <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Grupo huevo 2</label>
-              <input type="text" class="form-control" id="Grupo_huevo_2" name="Grupo_huevo_2">
+              <input type="text" class="form-control" id="eggGroup2" name="eggGroup2">
           </div>
           <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Japonés</label>
-              <input type="text" class="form-control" id="Japones" name="Japones">
+              <input type="textarea" class="form-control" id="japanese" name="japanese">
           </div>
           <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label">Romanizado</label>
-              <input type="text" class="form-control" id="Romanizado" name="Romanizado">
+              <input type="text" class="form-control" id="romanized" name="romanized">
           </div>
           <div style="text-align:center" class="d-grid gap-2">
           <button type="submit" class="btn btn-outline-dark">Agregar</button>
