@@ -1,4 +1,5 @@
 @extends('layouts.master')
+@section('title','Agregar')
 
 @section('header')
 
@@ -69,5 +70,4 @@
       </form>
     </div>
   </div>
-
 @stop
