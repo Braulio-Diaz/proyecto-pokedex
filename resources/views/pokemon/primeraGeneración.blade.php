@@ -57,8 +57,14 @@
       <tbody>
         @foreach($pokemonsg1 as $pokemong1)
         <tr>
-          <th scope="row">{{ $pokemong1->id }}</th>
-          <td><img src="{{ $pokemong1->image }}" width="50" height="50" class="img-thumbnail"></td>
+          <th scope="row">{{ $pokemong1->number }}</th>
+          <td>
+            @if(Storage::disk('images')->has($pokemong1->image))
+            <img src="{{ url('miniatura/'.$pokemong1->image) }}" width="50" height="50" class="img-thumbnail">
+            @else 
+            <img src="{{ $pokemong1->image }}" width="50" height="50" class="img-thumbnail">
+            @endif
+          </td>
           <td >{{ $pokemong1->name }}</td>
           <td>{{ $pokemong1->type1 }}</td>
           <td>{{ $pokemong1->type2 }}</td>
@@ -66,8 +72,13 @@
           <td>{{ $pokemong1->eggGroup2 }}</td>
           <td>{{ $pokemong1->japanese }}</td>
           <td>{{ $pokemong1->romanized }}</td>
-          <td><button type="button" class="btn btn-success" style="background-color:#45B143;">Editar</button></td>
-          <td><button type="button" class="btn btn-danger" style="background-color:#F14600;">Eliminar</button></td>
+          <td><a href="#" type="button" class="btn btn-success" style="background-color:#45B143;">Editar</a></td>
+          <td>
+            <form action="pokemon/{{ $pokemong1->id }}" method="POST">
+              {{ method_field('delete') }}
+            <button type="submit" class="btn btn-danger" style="background-color:#F14600;">Eliminar</button>
+            </form>
+          </td>
       </tr>
       @endforeach
       </tbody>

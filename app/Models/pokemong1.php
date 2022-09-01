@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class pokemong1 extends Model
+class Pokemong1 extends Model
 {
     use HasFactory;
     protected $primarykey = 'id';
-    protected $table = 'pokemong1';
+    protected $table = 'Pokemong1';
 }

@@ -15,6 +15,7 @@ class CreatePokemonG1Table extends Migration
     {
         Schema::create('pokemong1', function (Blueprint $table) {
             $table->id();
+            $table->integer('number');
             $table->text('image');
             $table->string('name', 50);
             $table->string('type1', 50);

@@ -29,41 +29,60 @@
 
 <div class="card">
     <div class="card-body">
-      <h4 class="card-title" style="text-align:center">Agregar pokémon</h4>
+      <h4 class="card-title" style="text-align:center">⚡Agregar pokémon⚡</h4>
       <br>
-      <form action="/pokemon" method="POST" >
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label">Link imagen</label>
-          <input type="text" class="form-control" id="image" name="image">
+      <form action="/pokemon" method="POST" enctype="multipart/form-data">
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Número</span>
           </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">Nombre</label>
-            <input type="text" class="form-control" id="name" name="name">
+          <input type="number" class="form-control" id="number" name="number" min="1" max="151" placeholder="" aria-label="Nombre" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <input type="file" class="form-control" accept=".jpg, .png, .jpeg" id="image" name="image" placeholder="" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Nombre</span>
+            </div>
+            <input type="text" class="form-control" id="name" name="name" placeholder="" aria-label="Nombre" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Tipo 1</span>
           </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Tipo 1</label>
-            <input type="text" class="form-control" id="type1" name="type1">
+          <input type="text" class="form-control" id="type1" name="type1" placeholder="" aria-label="Nombre" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Tipo 2</span>
           </div>
-          <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Tipo 2</label>
-              <input type="text" class="form-control" id="type2" name="type2">
+          <input type="text" class="form-control" id="type2" name="type2" placeholder="" aria-label="Nombre" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Grupo huevo 1</span>
           </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">Grupo huevo 1</label>
-            <input type="text" class="form-control" id="eggGroup1" name="eggGroup1">
+          <input type="text" class="form-control" id="eggGroup1" name="eggGroup1" placeholder="" aria-label="Nombre" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Grupo huevo 2</span>
           </div>
-          <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Grupo huevo 2</label>
-              <input type="text" class="form-control" id="eggGroup2" name="eggGroup2">
+          <input type="text" class="form-control" id="eggGroup2" name="eggGroup2" placeholder="" aria-label="Nombre" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Japonés</span>
           </div>
-          <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Japonés</label>
-              <input type="textarea" class="form-control" id="japanese" name="japanese">
+          <input type="text" class="form-control" id="japanese" name="japanese" placeholder="" aria-label="Nombre" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Romanizado</span>
           </div>
-          <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label">Romanizado</label>
-              <input type="text" class="form-control" id="romanized" name="romanized">
-          </div>
+          <input type="text" class="form-control" id="romanized" name="romanized" placeholder="" aria-label="Nombre" aria-describedby="basic-addon1">
+        </div>
           <div style="text-align:center" class="d-grid gap-2">
           <button type="submit" class="btn btn-outline-dark">Agregar</button>
           </div>

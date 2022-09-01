@@ -3,7 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\pokemong1;
+use Illuminate\Http\Response;
+use App\Models\Pokemong1;
 use Illuminate\Support\Facades\DB;
 
 class PokedexController extends Controller
@@ -26,7 +27,8 @@ class PokedexController extends Controller
         ->orWhere('type2','LIKE','%'.$pokemonabuscar.'%')
         ->orWhere('eggGroup1','LIKE','%'.$pokemonabuscar.'%')
         ->orWhere('eggGroup2','LIKE','%'.$pokemonabuscar.'%')
-        ->orderBy('id', 'ASC')
+        ->orWhere('number','LIKE','%'.$pokemonabuscar.'%')
+        ->orderBy('number', 'ASC')
         ->get();
 
         return view('pokemon.primeraGeneración', [
@@ -42,6 +44,7 @@ class PokedexController extends Controller
     public function store(Request $request){
         
         $this->validate($request, [
+            'number'=>'required',
             'image'=>'required',
             'name'=>'required',
             'type1'=>'required',
@@ -52,9 +55,17 @@ class PokedexController extends Controller
             'romanized'=>'required'
         ]);
 
+        $image = $request->file('image');
+        
+        if($image){
+            $imagen_path = time()."-".$image->getClientOriginalName();
+            \Storage::disk('images')->put($imagen_path, \File::get($image));
+        }
+
         //GUARDAMOS LOS DATOS EN LA BASE DE DATOS
         $pokemong1 = new Pokemong1();
-        $pokemong1->image = $request->image;
+        $pokemong1->number = $request->number;
+        $pokemong1->image = $imagen_path;
         $pokemong1->name = $request->name;
         $pokemong1->type1 = $request->type1;
         $pokemong1->type2 = $request->type2;
@@ -70,5 +81,24 @@ class PokedexController extends Controller
         return view('pokemon.primeraGeneración', [
             'pokemonsg1'=> $pokemonsg1
         ]);
+    }
+
+    public function destroy($id){
+
+        $pokemong1 = Pokemong1::find($id);
+        $pokemong1->delete();
+
+        $pokemonsg1 = Pokemong1::get();
+
+        return view('pokemons', [
+            'pokemonsg1'=> $pokemonsg1
+        ]);
+    }
+
+    public function getImagen($filename){
+        
+        $file = \Storage::disk('images')->get($filename);
+        
+        return new Response($file, 200);
     }
 }

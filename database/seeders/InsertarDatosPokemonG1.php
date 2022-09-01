@@ -16,6 +16,7 @@ class InsertarDatosPokemonG1 extends Seeder
     {
         DB::table('pokemong1')->insert(array(
             [
+                'number'=> '1',
                 'image'=> 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png',
                 'name'=> 'Bulbasaur',
                 'type1'=> 'Planta',
@@ -26,6 +27,7 @@ class InsertarDatosPokemonG1 extends Seeder
                 'romanized'=> 'Fushigidane'
             ],
             [
+                'number'=> '2',
                 'image'=> 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png',
                 'name'=> 'Ivysaur',
                 'type1'=> 'Planta',
@@ -36,6 +38,7 @@ class InsertarDatosPokemonG1 extends Seeder
                 'romanized'=> 'Fushigisō'
             ],
             [
+                'number'=> '3',
                 'image'=> 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png',
                 'name'=> 'Venusaur',
                 'type1'=> 'Planta',
@@ -46,6 +49,7 @@ class InsertarDatosPokemonG1 extends Seeder
                 'romanized'=> 'Fushigibana'
             ],
             [
+                'number'=> '4',
                 'image'=> 'https://pm1.narvii.com/7833/9fe8f8a6f58dc2c643dd1e04982ffdba0bc30a88r1-927-1044v2_hq.jpg',
                 'name'=> 'Charmander',
                 'type1'=> 'Fuego',
@@ -56,6 +60,7 @@ class InsertarDatosPokemonG1 extends Seeder
                 'romanized'=> 'Hitokage'
             ],
             [
+                'number'=> '5',
                 'image'=> 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/005.png',
                 'name'=> 'Charmeleon',
                 'type1'=> 'Fuego',
@@ -66,6 +71,7 @@ class InsertarDatosPokemonG1 extends Seeder
                 'romanized'=> 'Rizādo'
             ],
             [
+                'number'=> '6',
                 'image'=> 'https://static.wikia.nocookie.net/35d65408-493d-4381-8dfb-1afa6816f0db',
                 'name'=> 'Charizard',
                 'type1'=> 'Fuego',
@@ -76,6 +82,7 @@ class InsertarDatosPokemonG1 extends Seeder
                 'romanized'=> 'Rizādon'
             ],
             [
+                'number'=> '7',
                 'image'=> 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png',
                 'name'=> 'Squirtle',
                 'type1'=> 'Agua',
@@ -86,6 +93,7 @@ class InsertarDatosPokemonG1 extends Seeder
                 'romanized'=> 'Zenigame'
             ],
             [
+                'number'=> '8',
                 'image'=> 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/008.png',
                 'name'=> 'Wartortle',
                 'type1'=> 'Agua',
@@ -96,6 +104,7 @@ class InsertarDatosPokemonG1 extends Seeder
                 'romanized'=> 'Kamēru'
             ],
             [
+                'number'=> '9',
                 'image'=> 'https://img.joomcdn.net/3612424ef4446c1d422f60acbbd8c4ccb21090fc_original.jpeg',
                 'name'=> 'Blastoise',
                 'type1'=> 'Agua',
@@ -106,6 +115,7 @@ class InsertarDatosPokemonG1 extends Seeder
                 'romanized'=> 'Kamekkusu'
             ],
             [
+                'number'=> '10',
                 'image'=> 'https://assets.pokemon.com/assets/cms2/img/pokedex/detail/010.png',
                 'name'=> 'Caterpie',
                 'type1'=> 'Bicho',
@@ -116,6 +126,7 @@ class InsertarDatosPokemonG1 extends Seeder
                 'romanized'=> 'Kyatapī'
             ],
             [
+                'number'=> '11',
                 'image'=> 'https://assets.pokemon.com/assets/cms2/img/pokedex/full/011.png',
                 'name'=> 'Metapod',
                 'type1'=> 'Bicho',

@@ -63,25 +63,27 @@
     <div class="card" >
       <img src="https://i.pinimg.com/originals/ff/ba/e0/ffbae06e278676d2e8550452cd41cb0c.png
       " class="card-img-top" alt="...">
-      <div class="card-body">
         <br>
-        <h5 class="card-title" style="text-align:center">Charmander</h5>
+        <br>
+        <div class="card-footer">
+        <h5 class="card-title" style="text-align:center">🔥Charmander🔥</h5>
         <p class="card-text">Charmander es un pequeño lagarto bípedo. Sus características de fuego son resaltadas por su color de piel anaranjado y su cola con la punta envuelta en llamas. Charmander, como sus evoluciones Charmeleon y Charizard, tiene una pequeña llama en la punta de su cola.</p>
       </div>
     </div>
     <div class="card">
       <img src="https://juguetespokemon.com/wp-content/uploads/2021/05/Bulbasaur.png" class="card-img-top" alt="...">
-      <div class="card-body">
         <br>
         <br>
-        <h5 class="card-title" style="text-align:center">Bulbasaur</h5>
+        <br>
+        <div class="card-footer">
+        <h5 class="card-title" style="text-align:center">🍃Bulbasaur🍃</h5>
         <p class="card-text">Bulbasaur es un Pokémon de tipo planta/veneno introducido en la primera generación. Es uno de los Pokémon iniciales que pueden elegir los entrenadores que empiezan su aventura en la región Kanto, junto a Squirtle y Charmander (excepto en Pokémon Amarillo).</p>
       </div>
     </div>
     <div class="card">
       <img src="https://www.ecured.cu/images/0/08/Squirtle1.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <h5 class="card-title" style="text-align:center">Squirtle</h5>
+      <div class="card-footer">
+        <h5 class="card-title" style="text-align:center">💧Squirtle💧</h5>
         <p class="card-text">Squirtle es un Pokémon de tipo agua introducido en la primera generación. Es uno de los Pokémon iniciales que pueden elegir los entrenadores que empiezan su aventura en la región Kanto.</p>
       </div>
     </div>

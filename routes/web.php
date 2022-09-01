@@ -25,6 +25,9 @@ Route::get('/pokemongeneraciones', 'App\Http\Controllers\PokedexController@pokem
 //---------------//
 Route::resource('pokemon', 'App\Http\Controllers\PokedexController');
 
-route::get('/pokemon', 'App\Http\Controllers\PokedexController@index');
-route::post('/pokemon', 'App\Http\Controllers\PokedexController@store');
+Route::get('/pokemon', 'App\Http\Controllers\PokedexController@index');
+Route::post('/pokemon', 'App\Http\Controllers\PokedexController@store');
+Route::get('/pokemon/{id}', 'App\Http\Controllers\PokedexController@destroy');
+
+Route::get('/miniatura/{filename}', 'App\Http\Controllers\PokedexController@getImagen');
 //--------------//
