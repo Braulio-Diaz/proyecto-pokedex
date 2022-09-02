@@ -35,7 +35,7 @@
 @section('content')
 
 <br>
-<a href='/pokemon/create ' type="button" class="btn btn-primary" class="btn btn-outline-dark" style="background-color:#3399FF;">
+<a href='/pokemon/create' type="button" class="btn btn-primary" class="btn btn-outline-dark" style="background-color:#3399FF;">
     Agregar Pokémon
 </a>
 <div></div>
@@ -76,9 +76,9 @@
           <td>{{ $pokemong1->romanized }}</td>
           <td>{{ FormatTime::LongTimeFilterCreated($pokemong1->created_at) }}</td>
           <td>{{ FormatTime::LongTimeFilterUpdated($pokemong1->updated_at) }}</td>
-          <td><a href="#" type="button" class="btn btn-success" style="background-color:#45B143;">Editar</a></td>
+          <td><a href="/pokemon-edit/{{ $pokemong1->id }}" type="button" class="btn btn-success" style="background-color:#45B143;">Editar</a></td>
           <td>
-            <form action="pokemon/{{ $pokemong1->id }}" method="POST">
+            <form action="/pokemon/{{ $pokemong1->id }}" method="POST">
               {{ method_field('delete') }}
             <button type="submit" class="btn btn-danger" style="background-color:#F14600;">Eliminar</button>
             </form>

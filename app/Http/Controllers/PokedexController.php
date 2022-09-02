@@ -101,4 +101,70 @@ class PokedexController extends Controller
         
         return new Response($file, 200);
     }
+
+    public function update($id){
+
+        $pokemonsg1 = Pokemong1::where('id', $id)->get();
+
+        return view('pokemon.editar', [
+
+            'pokemonsg1' => $pokemonsg1
+        ]);
+    }
+
+    public function updateSave(Request $request){
+
+        $this->validate($request, [
+            'number'=>'required',
+            'name'=>'required',
+            'type1'=>'required',
+            'type2'=>'required',
+            'eggGroup1'=>'required',
+            'eggGroup2'=>'required',
+            'japanese'=>'required',
+            'romanized'=>'required'
+        ]);
+
+        $imagen = $request->file('image');
+
+        if ($imagen) {
+            
+            $imagen_path = time()."-".$imagen->getClientOriginalName();
+            \Storage::disk('images')->put($imagen_path, \File::get($imagen));
+
+            Pokemong1::where('id', $request->id)->update([
+
+            'number'=> $request->number,
+            'image'=> $imagen_path,
+            'name'=> $request->name,
+            'type1'=> $request->type1,
+            'type2'=> $request->type2,
+            'eggGroup1'=> $request->eggGroup1,
+            'eggGroup2'=> $request->eggGroup2,
+            'japanese'=> $request->japanese,
+            'romanized'=> $request->romanized
+            ]);
+
+        } else {
+
+            Pokemong1::where('id', $request->id)->update([
+
+                'number'=> $request->number,
+                'name'=> $request->name,
+                'type1'=> $request->type1,
+                'type2'=> $request->type2,
+                'eggGroup1'=> $request->eggGroup1,
+                'eggGroup2'=> $request->eggGroup2,
+                'japanese'=> $request->japanese,
+                'romanized'=> $request->romanized
+            ]);
+        }
+
+        $pokemonsg1 = Pokemong1::get();
+
+        return view ('pokemon.primeraGeneración', [
+
+            'pokemonsg1' => $pokemonsg1
+        ]);
+    }
 }

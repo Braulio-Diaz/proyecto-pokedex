@@ -59,7 +59,7 @@ class FormatTime{
             }
         }
  
-        return "Actualizado Hace " . $result;
+        return "Hace " . $result;
     }
 
     public static function LongTimeFilterCreated($date){
@@ -119,6 +119,6 @@ class FormatTime{
                 $result = $since_start->y . ' años';
             }
         }
-        return "Creado Hace " . $result;
+        return "Hace " . $result;
     }
 }
