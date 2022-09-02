@@ -52,6 +52,8 @@
           <th scope="col">Grupo huevo 2</th>
           <th scope="col">Japonés</th>
           <th scope="col">Romanizado</th>
+          <th scope="col">Creado</th>
+          <th scope="col">Actualizado</th>
         </tr>
       </thead>
       <tbody>
@@ -72,6 +74,8 @@
           <td>{{ $pokemong1->eggGroup2 }}</td>
           <td>{{ $pokemong1->japanese }}</td>
           <td>{{ $pokemong1->romanized }}</td>
+          <td>{{ FormatTime::LongTimeFilterCreated($pokemong1->created_at) }}</td>
+          <td>{{ FormatTime::LongTimeFilterUpdated($pokemong1->updated_at) }}</td>
           <td><a href="#" type="button" class="btn btn-success" style="background-color:#45B143;">Editar</a></td>
           <td>
             <form action="pokemon/{{ $pokemong1->id }}" method="POST">
