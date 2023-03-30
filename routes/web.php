@@ -23,12 +23,12 @@ Route::get('/inicio', 'App\Http\Controllers\PokedexController@inicio');
 Route::get('/pokemongeneraciones', 'App\Http\Controllers\PokedexController@pokemons')->name('pokemongeneraciones');
 
 //---------------//
-//Route::resource('pokemon', 'App\Http\Controllers\PokedexController');
+Route::resource('pokemon', 'App\Http\Controllers\PokedexController');
 
 Route::get('/pokemon', 'App\Http\Controllers\PokedexController@index');
-Route::post('/pokemon', 'App\Http\Controllers\PokedexController@store');
 Route::get('/pokemon/create', 'App\Http\Controllers\PokedexController@create');
-Route::get('/pokemon/{id}', 'App\Http\Controllers\PokedexController@destroy');
+Route::post('/pokemon', 'App\Http\Controllers\PokedexController@store');
+Route::delete('/pokemon/{id}', 'App\Http\Controllers\PokedexController@destroy');
 Route::get('/pokemon-edit/{id}', 'App\Http\Controllers\PokedexController@update');
 Route::post('/pokemon', 'App\Http\Controllers\PokedexController@updateSave');
 

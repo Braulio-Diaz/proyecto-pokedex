@@ -31,7 +31,7 @@
     <div class="card-body">
       <h4 class="card-title" style="text-align:center">⚡Editar pokémon⚡</h4>
       <br>
-      <form action="/pokemon" method="POST" enctype="multipart/form-data">
+      <form action="/pokemon" method="post" enctype="multipart/form-data">
         <div class="input-group mb-3">
           <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon1">Número</span>

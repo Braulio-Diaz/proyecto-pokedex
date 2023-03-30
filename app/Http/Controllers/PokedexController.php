@@ -162,7 +162,7 @@ class PokedexController extends Controller
 
         $pokemonsg1 = Pokemong1::get();
 
-        return view ('pokemon.primeraGeneración', [
+        return view ('pokemons', [
 
             'pokemonsg1' => $pokemonsg1
         ]);
